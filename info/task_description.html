@@ -1,0 +1,63 @@
+<style>
+    pre.example {
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        background: #eee;
+        margin-left: 20px;
+        padding: 5px;
+        overflow: auto;
+    }
+
+    p.indent {
+        margin-left: 20px;
+    }
+</style>
+
+<p>
+    You are the owner of the cafe, where 3 chefs works: JapaneseCook, RussianCook and ItalianCook. Each of them can cook the national food and drink:<br>
+- JapaneseCook: Sushi and Tea<br>
+- RussianCook: Dumplings and Compote<br>
+- ItalianCook: Pizza and Juice<br>
+Your task is to create 3 different classes for each chef and methods for them:<br>
+- add_food(food_amount, food_price), which add to the client's order value of the foods which he had chosen<br>
+- add_drink(drink_amount, drink_price), which add to the client's order value of the drinks which he had chosen<br>
+- total(), which return string like that: 'Foods: 150, Drinks: 50, Total: 200', and for the each chef instead of Foods and Drinks will be used him national food and drink.<br>
+Every client can choose only one chef.
+In this mission this design patter could help - <a href='https://en.wikipedia.org/wiki/Abstract_factory_pattern'>Abstract Factory</a>.
+</p>
+
+<p>
+<strong>Example</strong>:
+<pre class="example">
+>>>client_1 = JapaneseCook()
+>>>client_1.add_food(2, 20)
+>>>client_1.add_drink(5, 4)
+>>>client_1.total()
+Sushi: 40, Tea: 20, Total: 60
+</pre>
+</p>
+<br>
+
+
+<p>
+    In this mission all data will be correct and you don't need to implement value checking.
+</p>
+
+<p>
+    <strong>Input: </strong>Statements and expression with the 3 chef's classes.
+</p>
+
+<p>
+    <strong>Output: </strong> The behaviour as described.
+</p>
+
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Work with classes and object-oriented programming - is a high level which you should learn for using full benefits of Python.
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    All data are correct.
+</p>
