@@ -42,7 +42,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             //YOUR FUNCTION NAME
             var fname = 'checkio';
 
-            var checkioInput = data.in //|| "AbstractCook('', '', 1, 1, 1, 1)";
+            var checkioInput = data.in; //|| "AbstractCook('', '', 1, 1, 1, 1)"
 
             var failError = function (dError) {
                 $content.find('.call').html(checkioInput);
