@@ -19,10 +19,9 @@ run_test = """
 RET['code_result'] = {}
 """
 
-
-def prepare_test(test="", answer=None, middle_code="\n", show_code=None):
+def prepare_test(test="", answer=None, middle_code="", show_code=None):
     if show_code is None:
-        show_code = middle_code + test
+        show_code = middle_code + "\n" + test
     if not test:
         return_code = "\nRET['code_result'] = ''"
         answer = ''
@@ -35,46 +34,46 @@ def prepare_test(test="", answer=None, middle_code="\n", show_code=None):
 
 TESTS = {
     "Clients": [
-        prepare_test(test='''client_1 = JapaneseCook()
+        prepare_test(middle_code='''client_1 = JapaneseCook()
 client_1.add_food(2, 20)
-client_1.add_drink(5, 4)
-client_1.total()''',
+client_1.add_drink(5, 4)''',
+                     test="client_1.total()",
                      answer="Sushi: 40, Tea: 20, Total: 60"),
 
-        prepare_test(test='''client_2 = JapaneseCook()
+        prepare_test(middle_code='''client_2 = JapaneseCook()
 client_2.add_food(1, 65)
 client_2.add_drink(4, 10)
-client_2.add_drink(2, 5)
-client_2.total()''',
+client_2.add_drink(2, 5)''',
+                     test="client_2.total()",
                      answer="Sushi: 65, Tea: 50, Total: 115"),
 
-        prepare_test(test='''client_3 = RussianCook()
+        prepare_test(middle_code='''client_3 = RussianCook()
 client_3.add_food(3, 30)
 client_3.add_drink(4, 5)
-client_3.add_food(1, 50)
-client_3.total()''',
+client_3.add_food(1, 50)''',
+                     test="client_3.total()",
                      answer="Dumplings: 140, Compote: 20, Total: 160"),
 
-        prepare_test(test='''client_4 = RussianCook()
+        prepare_test(middle_code='''client_4 = RussianCook()
 client_4.add_food(2, 25)
 client_4.add_food(2, 50)
 client_4.add_drink(2, 10)
-client_4.add_drink(2, 15)
-client_4.total()''',
+client_4.add_drink(2, 15)''',
+                     test="client_4.total()",
                      answer="Dumplings: 150, Compote: 50, Total: 200"),
 
-        prepare_test(test='''client_5 = ItalianCook()
+        prepare_test(middle_code='''client_5 = ItalianCook()
 client_5.add_food(6, 25)
-client_5.add_drink(5, 10)
-client_5.total()''',
+client_5.add_drink(5, 10)''',
+                     test="client_5.total()",
                      answer="Pizza: 150, Juice: 50, Total: 200"),
 
-        prepare_test(test='''client_6 = ItalianCook()
+        prepare_test(middle_code='''client_6 = ItalianCook()
 client_6.add_food(2, 10)
 client_6.add_drink(2, 10)
 client_6.add_food(4, 25)
-client_6.add_drink(5, 4)
-client_6.total()''',
+client_6.add_drink(5, 4)''',
+                     test="client_6.total()",
                      answer="Pizza: 120, Juice: 40, Total: 160")
     ]
 
