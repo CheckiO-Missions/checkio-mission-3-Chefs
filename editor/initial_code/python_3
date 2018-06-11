@@ -10,8 +10,6 @@ class AbstractCook:
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    def json_dict(d):
-        return dict((k, list(v)) for k, v in d.items())
 
     client_1 = JapaneseCook()
     client_1.add_food(2, 30)
