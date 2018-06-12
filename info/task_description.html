@@ -1,24 +1,9 @@
-<style>
-    pre.example {
-        border: 1px solid #aaa;
-        border-radius: 3px;
-        background: #eee;
-        margin-left: 20px;
-        padding: 5px;
-        overflow: auto;
-    }
-
-    p.indent {
-        margin-left: 20px;
-    }
-</style>
-
 <p>
     You are the owner of the cafe, where 3 chefs works: JapaneseCook, RussianCook and ItalianCook. Each of them can cook the national food and drink:<br>
 - JapaneseCook: Sushi and Tea<br>
 - RussianCook: Dumplings and Compote<br>
 - ItalianCook: Pizza and Juice<br>
-Your task is to create 3 different classes for each chef and methods for them:<br>
+Your task is to create 3 different subclasses (one for each chef) which are the child of AbstractCook and have these methods:<br>
 - add_food(food_amount, food_price), which add to the client's order value of the foods which he had chosen<br>
 - add_drink(drink_amount, drink_price), which add to the client's order value of the drinks which he had chosen<br>
 - total(), which return string like that: 'Foods: 150, Drinks: 50, Total: 200', and for the each chef instead of Foods and Drinks will be used him national food and drink.<br>
@@ -32,8 +17,17 @@ In this mission this design patter could help - <a href='https://en.wikipedia.or
 client_1 = JapaneseCook()
 client_1.add_food(2, 20)
 client_1.add_drink(5, 4)
-client_1.total()
-"Sushi: 40, Tea: 20, Total: 60"
+client_1.total() == "Sushi: 40, Tea: 20, Total: 60"
+
+client_2 = RussianCook()
+client_2.add_food(1, 40)
+client_2.add_drink(5, 20)
+client_2.total() == "Dumplings: 40, Compote: 100, Total: 140"
+
+client_3 = ItalianCook()
+client_3.add_food(2, 20)
+client_3.add_drink(2, 10)
+client_3.total() == "Pizza: 40, Juice: 20, Total: 60"
 </pre>
 </p>
 <br>
