@@ -21,12 +21,12 @@ if __name__ == '__main__':
 
     client_2 = RussianCook()
     client_2.add_food(1, 40)
-    client_1.add_food(2, 25)
+    client_2.add_food(2, 25)
     client_2.add_drink(5, 20)
 
     client_3 = ItalianCook()
     client_3.add_food(2, 20)
-    client_1.add_food(2, 30)
+    client_3.add_food(2, 30)
     client_3.add_drink(2, 10)
 
     assert client_1.total() == "Sushi: 105, Tea: 20, Total: 125"
